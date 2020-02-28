@@ -1,0 +1,28 @@
+printf 'HEAD / HTTP/1.1\r\nHost: en.wikipedia.org\r\n\r\n' | nc en.wikipedia.org 80
+
+There are two divisions in this command, divided by a pipe.
+The first part of this command, printf will print the output to the console. 
+It prints the following:
+HEAD / HTTP/1.1 
+HOST: en.wikipedia.org
+So these statements are passed onto the second half of the pipe,i.e., nc en.wikipedia.org 80.
+It is basically a HTTP Request to wikipedia.org to fetch the details of the webiste. HTTP HEAD verb is used to request HTTP headers from server.
+nc is netcat command which is used for reading from and writing to network connections using TCP or UDP	protocol. HTTP uses port 80. So any of the http requests are sent over port 80.
+Connection is established to en.wikipedia.org on port 80 and the Head request is passed to wikipedia.org. It returns the header data and is printed to console.
+
+Output:-
+HTTP/1.1 301 TLS Redirect
+Date: Mon, 10 Feb 2020 07:14:19 GMT
+Server: Varnish
+X-Varnish: 899944349
+X-Cache: cp5011 int
+X-Cache-Status: int-front
+Server-Timing: cache;desc="int-front"
+Set-Cookie: WMF-Last-Access=10-Feb-2020;Path=/;HttpOnly;secure;Expires=Fri, 13 Mar 2020 00:00:00 GMT
+Set-Cookie: WMF-Last-Access-Global=10-Feb-2020;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Fri, 13 Mar 2020 00:00:00 GMT
+X-Client-IP: 183.82.101.16
+Location: https://en.wikipedia.org/
+Content-Length: 0
+Via: HTTP/1.1 forward.http.proxy:3128
+Connection: keep-alive
+
