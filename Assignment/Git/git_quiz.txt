@@ -1,0 +1,24 @@
+1. git rebase -i HEAD~N [N is the number of last N commits]. Invoke git into an interactive rebase session. This will open an editor, where the N commits will be displayed in a reverse fashion(Latest commit at the bottom). Now replace 'pick' with 's' or 'squash' on the commits which you want to squash. These commits will be squashed into the previous commit('pick' commit). 
+
+2. git cherry-pick <commit-id> will merge the commit with commit-id to the current working branch. git cherry-pick -m 1 <commit-id>. This is used in case of multiple parents and 1 is the parent id.
+
+4.
+1. Invoke git into an interactive rebase session:  git rebase -i HEAD~N.
+2. This will open an editor, where the N commits will be displayed in a reverse fashion(Latest commit at the bottom). 
+3.Now replace 'pick' with 's' or 'squash' on the commits which you want to squash. These commits will be squashed into the previous commit('pick' commit).
+4. After saving the current changes, another editor opens where you can edit the commit message.
+5. Now save the changes, if any. The commits are squashed into a single commit.
+
+5. Rebasing is the process of combining a sequence of commits to a new base commit. It will replay changes in the branch, applying your changes as if they happened all on the same branch. Rebasing is most useful and easily visualized in the context of a feature branching workflow.
+
+6. If we have multiple committed files in a branch, and we want to merge some specific files to a different branch, we use cherry picking.
+
+
+(30 rides)2670 + 880 --> 3550  --- 3016(after refund of remaining 8 rides)
+(15 rides)1425 + 600 --> 2025 ->for 15 days  remaining 7 days-bike -> +700        ---2725
+					    		     -bus+shuttl-> +980   ---3005
+							     -bus+bus-> +630      ---2655
+				monthly expenses for travelling- 2700
+
+
+
