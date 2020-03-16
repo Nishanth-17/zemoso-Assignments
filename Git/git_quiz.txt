@@ -13,7 +13,7 @@
 
 6. If we have multiple committed files in a branch, and we want to merge some specific files to a different branch, we use cherry picking.
 
-
+-
 
 
 
