@@ -14,11 +14,6 @@
 6. If we have multiple committed files in a branch, and we want to merge some specific files to a different branch, we use cherry picking.
 
 
-(30 rides)2670 + 880 --> 3550  --- 3016(after refund of remaining 8 rides)
-(15 rides)1425 + 600 --> 2025 ->for 15 days  remaining 7 days-bike -> +700        ---2725
-					    		     -bus+shuttl-> +980   ---3005
-							     -bus+bus-> +630      ---2655
-				monthly expenses for travelling- 2700
 
 
 
