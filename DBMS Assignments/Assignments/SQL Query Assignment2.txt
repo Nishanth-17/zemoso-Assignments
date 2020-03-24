@@ -1,0 +1,52 @@
+Assignment 2:
+
+
+1. Find out the number of documentaries with deleted scenes.
+
+select count(*) from film INNER JOIN film_category ON (film.film_id=film_category.film_id) 
+INNER JOIN category ON (film_category.category_id=category.category_id) where category.name='Documentary' and special_features='Deleted Scenes';
+
+
+2. Find out the number of sci-fi movies rented by the store managed by Jon Stephens.
+
+select count(distinct f.film_id) from film as f,film_category as fc,category as cat,inventory as i,rental as r,staff as s,store as st where
+r.inventory_id=i.inventory_id and
+i.store_id=st.store_id and 
+st.manager_staff_id=s.staff_id and 
+s.first_name='Jon' and s.last_name='Stephens' and
+i.film_id=f.film_id and
+f.film_id=fc.film_id and
+fc.category_id=cat.category_id and name='Sci-Fi	';
+
+
+3. Find out the total sales from Animation movies.
+
+select SUM(amount) from film as f,film_category as fc,category as cat, inventory as i, rental as r,
+payment as p where
+r.inventory_id=i.inventory_id and
+i.film_id=f.film_id and
+f.film_id=fc.film_id and
+fc.category_id=cat.category_id and name='Animation' and
+r.rental_id=p.rental_id;
+
+
+4. Find out the top 3 rented category of movies  by “PATRICIA JOHNSON”.
+
+select cat.name AS 'Top 3 Category of Movies',cat.category_id from film as f,film_category as fc,category as cat,inventory as i, rental as r,customer as c where
+c.customer_id=r.customer_id and
+r.inventory_id=i.inventory_id and
+i.film_id=f.film_id and
+f.film_id=fc.film_id and
+fc.category_id=cat.category_id and
+c.first_name='PATRICIA' AND c.last_name='JOHNSON'
+group by cat.category_id order by count(*) desc limit 3;
+
+
+5. Find out the number of R rated movies rented by “SUSAN WILSON”.
+
+select count(*) from film as f,customer as c,inventory as i,rental as r where
+c.customer_id=r.customer_id and
+r.inventory_id=i.inventory_id and 
+i.film_id=f.film_id and
+f.rating='R' and c.first_name='SUSAN' and c.last_name='WILSON';
+
