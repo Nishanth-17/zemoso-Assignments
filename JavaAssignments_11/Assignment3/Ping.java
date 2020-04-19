@@ -34,7 +34,7 @@ public class Ping {
             }
         }
         catch(Exception e){
-            e.printStackTrace();
+		System.out.println("Error caught : "+e);
         }
         for(int i=1;i<=pingCount;i++) {
             timeArray.add(output.get(i));
