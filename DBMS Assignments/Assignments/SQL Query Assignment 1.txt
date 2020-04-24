@@ -1,0 +1,51 @@
+Assignment 1:
+
+1. Find out the PG-13 rated comedy movies. DO NOT use the film_list table.
+
+select title from film where film_id IN (select film_id from film_category where category_id=5);
+   
+Returned 58 rows.
+
+
+2. Find out the top 3 rented horror movies.
+
+select title from film, film_category, inventory, rental where rental.inventory_id=inventory.inventory_id and 
+inventory.film_id=film.film_id and 
+film.film_id=film_category.film_id and
+film_category.category_id=11 
+group by film.film_id order by count(*) desc limit 3;
+
+
+3. Find out the list of customers from India who have rented sports movies.
+
+select c.first_name,c.last_name from customer as c,address as a,city, country, rental as r,inventory as i, film as f,film_category as fc,category as cat where
+c.address_id=a.address_id and 
+a.city_id=city.city_id and 
+city.country_id=country.country_id and country='India' and
+c.customer_id=r.customer_id and 
+r.inventory_id=i.inventory_id and 
+i.film_id=f.film_id and 
+f.film_id=fc.film_id and 
+fc.category_id=cat.category_id and name='sports';
+
+
+4. Find out the list of customers from Canada who have rented “NICK WAHLBERG” movies.
+
+select c.customer_id,c.first_name,c.last_name from customer as c,address as a,city ,country, inventory as i,rental as r, film as f,film_actor as fa, actor where
+c.address_id=a.address_id and 
+a.city_id=city.city_id and
+city.country_id=country.country_id and country='Canada' and
+c.customer_id=r.customer_id and 
+r.inventory_id=i.inventory_id and 
+f.film_id=i.film_id and 
+f.film_id=fa.film_id and 
+fa.actor_id=actor.actor_id and 
+actor.first_name='NICK' and actor.last_name='WAHLBERG';
+
+
+5. Find out the number of movies in which “SEAN WILLIAMS” acted.
+
+select count(*) as MoviesCount from film_actor as fa INNER JOIN actor as a ON (a.actor_id=fa.actor_id) where a.first_name='SEAN' and a.last_name='WILLIAMS';
+
+
+
