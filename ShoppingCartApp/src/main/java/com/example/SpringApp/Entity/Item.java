@@ -18,7 +18,6 @@ public @Data @AllArgsConstructor @NoArgsConstructor class Item{
     @Column(name = "item_id")
     private int itemId;
 
-    @NotNull()
     @Size(min=1, message = "Item Name is Required")
     @Column(name = "item_name")
     private String itemName;

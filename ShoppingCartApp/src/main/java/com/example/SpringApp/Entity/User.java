@@ -22,12 +22,11 @@ public @Data @AllArgsConstructor @NoArgsConstructor class User {
     @Column(name = "user_id")
     private int userId;
 
-    @NotNull()
     @Size(min=1, message = "User Name is Required")
     @Column(name = "user_name")
     private String userName;
 
-    @Pattern(regexp="^[a-zA-Z0-9.!#$%&-]+@[a-zA-Z0-9-]*",message="Enter a Valid Email Address")
+    @Pattern(regexp="^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$",message="Enter a Valid Email Address")
     @Column(name = "user_email",unique = true)
     //@Unique(message="Email already registered!!!")
     private String userEmail;

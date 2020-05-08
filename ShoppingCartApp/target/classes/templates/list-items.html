@@ -36,9 +36,9 @@
 
         <tbody>
         <tr th:each="temp : ${item}">
-            <td th:text="${temp.itemName}"/>
+            <td th:text="${temp.itemName}"/ >
             <td>
-            <a th:href="@{/items/delete(ItemID=${temp.itemId})}"
+            <a th:href="@{/items/delete/}+${temp.itemId}"
                 class="btn btn-danger btn-sm"
                 onclick="if (!(confirm('Are you sure you want to delete this Item?'))) return false"
                 >

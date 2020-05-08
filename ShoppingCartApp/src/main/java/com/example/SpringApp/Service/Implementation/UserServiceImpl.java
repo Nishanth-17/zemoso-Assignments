@@ -22,8 +22,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getUserById(int theId) {
-        User user=userRepository.findById(theId).orElse(null);
+    public User getUserById(int id) {
+        User user=userRepository.findById(id).orElse(null);
         if(user==null){
             throw new RuntimeException("User not found");
         }
@@ -32,12 +32,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User saveUser(User user){
-        User theUser=userRepository.save(user);
-        return theUser;
+        User newUser=userRepository.save(user);
+        return newUser;
     }
 
     @Override
-    public void deleteUser(int theId){
-        userRepository.deleteById(theId);
+    public void deleteUser(int id){
+        userRepository.deleteById(id);
     }
 }

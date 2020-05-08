@@ -4,10 +4,10 @@ import com.example.SpringApp.Entity.User;
 
 import java.util.List;
 
-public interface UserService {
-    public List<User> getUsers();
-    public User getUserById(int theId);
-    public User saveUser(User user);
-    public void deleteUser(int theId);
+  public interface UserService {
+      List<User> getUsers();
+      User getUserById(int id);
+      User saveUser(User user);
+      void deleteUser(int id);
 }
 

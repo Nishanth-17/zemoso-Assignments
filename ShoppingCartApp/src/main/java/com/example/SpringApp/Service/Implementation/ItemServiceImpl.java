@@ -19,9 +19,9 @@ public class ItemServiceImpl implements ItemService {
 
 
     @Override
-    public List<Item> getItemsByUser(int theId) {
-        List<Item> itemsList=userRepository.findById(theId).get().getItems();
-        return itemsList;
+    public List<Item> getItemsByUser(int id) {
+        List<Item> items=userRepository.findById(id).get().getItems();
+        return items;
     }
 
     @Override
@@ -33,12 +33,12 @@ public class ItemServiceImpl implements ItemService {
         user.setUserName(cart.getUser().getUserName());
         */
         item.setUser(user);
-        Item theItem = itemRepository.save(item);
-        user.add(theItem);
-        return theItem;
+        Item newItem = itemRepository.save(item);
+        user.add(newItem);
+        return newItem;
     }
     @Override
-    public void deleteItemById(Integer theId) {
-        itemRepository.deleteById(theId);
+    public void deleteItemById(int id) {
+        itemRepository.deleteById(id);
     }
 }

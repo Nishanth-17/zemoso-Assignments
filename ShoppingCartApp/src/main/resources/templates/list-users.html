@@ -43,19 +43,20 @@
             <td th:text="${temp.userEmail}" align="center"/>
             <td th:text="${temp.userMobile}" align="center"/>
 
+
             <!-- Add Go to Cart button/link -->
             <td>
-                <a th:href="@{/users/update(UserID=${temp.userId})}"
+                <a th:href="@{/users/update/}+${temp.userId}"
                    class="btn btn-info btn-sm">
                     Update
                 </a>
-                <a th:href="@{/users/delete(UserID=${temp.userId})}"
+                <a th:href="@{/users/delete/}+${temp.userId}"
                    class="btn btn-danger btn-sm"
-                   onclick="if (!(confirm('Are you sure you want to delete this User?'))) return false">
+                   onclick="if (!(confirm('Are you sure you want to delete this Item?'))) return false">
                     Delete
                 </a>
                 <br><br>
-                <a th:href="@{/users/cart(UserID=${temp.userId})}"
+                <a th:href="@{/users/cart/}+${temp.userId}"
                    class="btn btn-success col-5">
                     Go to Cart
                 </a>

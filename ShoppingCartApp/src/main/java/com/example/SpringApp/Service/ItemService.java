@@ -6,7 +6,7 @@ import com.example.SpringApp.Entity.User;
 import java.util.List;
 
 public interface ItemService {
-    public List<Item> getItemsByUser(int theId);
-    public Item addItems(Item item, User user);
-    public void deleteItemById(Integer theId);
+     List<Item> getItemsByUser(int id);
+     Item addItems(Item item, User user);
+     void deleteItemById(int id);
 }
