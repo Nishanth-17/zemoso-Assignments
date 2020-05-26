@@ -66,22 +66,20 @@ public class UserController {
 
     @GetMapping("/updateForm")
     public String showUpdateUserForm(Model model, Authentication authentication){
-        String name=authentication.getName();
-        User user=userService.findByUsername(name);
+        String username=authentication.getName();
+        User user=userService.findByUsername(username);
         model.addAttribute("user",user);
         return "update-form";
     }
 
     @PostMapping("/update")
-    public void update(@ModelAttribute("user") User user, BindingResult bindingResult, Authentication authentication, Model model){
+    public String update(@ModelAttribute("user") User user, BindingResult bindingResult, Authentication authentication, Model model){
         userValidator.validateUpdate(user, bindingResult);
-
         if (bindingResult.hasErrors()) {
-            //return "update-form";
+            return "update-form";
         }
-        /*
-        String name=authentication.getName();
-        User newUser=userService.findByUsername(name);
+        String username=authentication.getName();
+        User newUser=userService.findByUsername(username);
         String password=newUser.getPasswordConfirm();
         user.setUsername(newUser.getUsername());
         user.setEmail(newUser.getEmail());
@@ -90,18 +88,17 @@ public class UserController {
         if(user.getMobile().equals(newUser.getMobile())){
             model.addAttribute("notUpdated","false");
         }
-        else
-        */
+        else {
             userService.saveUser(user);
             model.addAttribute("updateSuccessFlag", "success");
-        //}
-        //return "user-info";
+        }
+        return "user-info";
     }
     @GetMapping("/updatePassword")
     public String showFormForUpdatePassword(Model model,Authentication authentication)
     {
-        String name=authentication.getName();
-        User user=userService.findByUsername(name);
+        String username=authentication.getName();
+        User user=userService.findByUsername(username);
         model.addAttribute("user",user);
         return "update-password";
     }
@@ -113,8 +110,8 @@ public class UserController {
         if (bindingResult.hasErrors()) {
             return "update-password";
         }
-        String name=authentication.getName();
-        User newUser=userService.findByUsername(name);
+        String username=authentication.getName();
+        User newUser=userService.findByUsername(username);
         user.setUsername(newUser.getUsername());
         user.setEmail(newUser.getEmail());
         user.setMobile(newUser.getMobile());
@@ -125,16 +122,16 @@ public class UserController {
 
     @GetMapping("/showInfo")
     public String showInfo(Model model,Authentication authentication){
-        String name=authentication.getName();
-        User user=userService.findByUsername(name);
+        String username=authentication.getName();
+        User user=userService.findByUsername(username);
         model.addAttribute("user",user);
         return "user-info";
     }
 
-    @RequestMapping("/list")
+    @GetMapping("/list")
     public String list(Model model, Authentication authentication){
-        String name=authentication.getName();
-        User user=userService.findByUsername(name);
+        String username=authentication.getName();
+        User user=userService.findByUsername(username);
         List<Item> items=itemService.getItemsByUser(user.getUserId());
         model.addAttribute("item",items);
         return "list-item";
@@ -153,8 +150,8 @@ public class UserController {
         if (bindingResult.hasErrors()) {
             return "item-form";
         }
-        String name=authentication.getName();
-        User user=userService.findByUsername(name);
+        String username=authentication.getName();
+        User user=userService.findByUsername(username);
         itemService.addItems(item,user);
         return "redirect:/list";
     }
