@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Create an account</title>
+</head>
+<body><br>
+  <div class="container">
+
+        <form id="logoutForm" method="POST" th:action="@{/logout}">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        </form>
+      <div sec:authorize="isAuthenticated()"><h2>Welcome  <span sec:authentication="name"></span></h2></div>
+        <h2><br>
+            <a th:href="@{/showInfo}" class="btn btn-info col-2">Profile</a>
+            | <a th:href="@{/list}" class="btn btn-info col-2">Go to Cart</a>
+            | <a th:onclick="document.forms['logoutForm'].submit()" class="btn btn-danger col-2">Logout</a></h2>
+
+  </div>
+</body>
+</html>
