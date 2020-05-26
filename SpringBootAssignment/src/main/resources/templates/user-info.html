@@ -60,23 +60,22 @@
 
             <td>
 
-                <a th:href="@{/updateForm}"
+                <a th:href="@{/update}"
                    class="btn btn-info btn-sm">
                     Update Mobile Number
-                </a> |
-                <a th:href="@{/updatePassword}"
-                   class="btn btn-info btn-sm">
-                    Update Password
                 </a>
 
                 <br><br>
 
             </td>
 
-
         </tr>
         </tbody>
     </table>
+    <a th:href="@{/updatePassword}">
+        Update Password
+    </a>
+<br>
     <a th:href="@{/welcome}"
        class="btn btn-info col-2">
         Go Back

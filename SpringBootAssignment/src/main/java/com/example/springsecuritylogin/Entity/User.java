@@ -35,6 +35,7 @@ public @Data @AllArgsConstructor @NoArgsConstructor class User {
     @Column(name = "password")
     private String password;
 
+    @Transient
     @Column(name="password_confirm")
     private String passwordConfirm;
 

@@ -2,6 +2,7 @@ package com.example.springsecuritylogin.Controller;
 
 import com.example.springsecuritylogin.Entity.Item;
 import com.example.springsecuritylogin.Entity.User;
+import com.example.springsecuritylogin.Repository.UserRepository;
 import com.example.springsecuritylogin.Service.ItemService;
 import com.example.springsecuritylogin.Service.UserService;
 import com.example.springsecuritylogin.Validation.ItemValidator;
@@ -16,6 +17,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class UserController {
@@ -25,6 +27,7 @@ public class UserController {
 
     @Autowired
     private ItemService itemService;
+
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -64,7 +67,7 @@ public class UserController {
         return "welcome";
     }
 
-    @GetMapping("/updateForm")
+    @GetMapping("/update")
     public String showUpdateUserForm(Model model, Authentication authentication){
         String username=authentication.getName();
         User user=userService.findByUsername(username);
@@ -73,27 +76,16 @@ public class UserController {
     }
 
     @PostMapping("/update")
-    public String update(@ModelAttribute("user") User user, BindingResult bindingResult, Authentication authentication, Model model){
+    public String update(@ModelAttribute("user") User user, BindingResult bindingResult, Authentication authentication, Model model) {
         userValidator.validateUpdate(user, bindingResult);
         if (bindingResult.hasErrors()) {
             return "update-form";
         }
-        String username=authentication.getName();
-        User newUser=userService.findByUsername(username);
-        String password=newUser.getPasswordConfirm();
-        user.setUsername(newUser.getUsername());
-        user.setEmail(newUser.getEmail());
-        user.setPassword(password);
-        user.setPasswordConfirm(password);
-        if(user.getMobile().equals(newUser.getMobile())){
-            model.addAttribute("notUpdated","false");
-        }
-        else {
-            userService.saveUser(user);
+            userService.updateUser(user);
             model.addAttribute("updateSuccessFlag", "success");
+            return "user-info";
         }
-        return "user-info";
-    }
+
     @GetMapping("/updatePassword")
     public String showFormForUpdatePassword(Model model,Authentication authentication)
     {
@@ -110,11 +102,6 @@ public class UserController {
         if (bindingResult.hasErrors()) {
             return "update-password";
         }
-        String username=authentication.getName();
-        User newUser=userService.findByUsername(username);
-        user.setUsername(newUser.getUsername());
-        user.setEmail(newUser.getEmail());
-        user.setMobile(newUser.getMobile());
         userService.saveUser(user);
         model.addAttribute("updatePasswordSuccessFlag","success");
         return "user-info";

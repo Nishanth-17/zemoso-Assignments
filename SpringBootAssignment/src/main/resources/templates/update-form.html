@@ -23,8 +23,15 @@
     <form name="myform" th:action="@{/update}"
           th:object="${user}" method="POST" >
 
-        <!-- Hidden Id to handle Update -->
         <input type="hidden" th:field="*{userId}" />
+
+        <input type="hidden" th:field="*{username}" />
+
+        <input type="hidden" th:field="*{email}" />
+
+        <input type="hidden" th:field="*{password}" />
+
+        <input type="hidden" th:field="*{passwordConfirm}" />
 
         <input type="text" th:field="*{mobile}"
                class="form-control mb-4 col-4" placeholder="Mobile Number" required>

@@ -27,13 +27,13 @@ public class UserServiceTest {
         @Test
         public void findByUsernameTest(){
             User user=new User(1,"Willey","willey@mail.com","12112212");
-            when(userRepository.findByUsername(user.getUsername())).thenReturn((Optional.of(user)));
+            //when(userRepository.findByUsername(user.getUsername())).thenReturn((Optional.of(user)));
             assertEquals(1,userService.findByUsername(user.getUsername()).getUsername());
         }
     @Test
     public void findByEmailTest(){
         User user=new User(1,"Willey","willey@mail.com","12112212");
-        when(userRepository.findByEmail(user.getEmail())).thenReturn((Optional.of(user)));
+        //when(userRepository.findByEmail(user.getEmail())).thenReturn((Optional.of(user)));
         assertEquals(1,userService.findByEmail(user.getEmail()).getEmail());
     }
         @Test
@@ -47,4 +47,4 @@ public class UserServiceTest {
 
     }
 
-}
+
