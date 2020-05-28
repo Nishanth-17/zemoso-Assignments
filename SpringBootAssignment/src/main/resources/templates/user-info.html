@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>User Info</title>
+</head>
+
+<body>
+<script th:inline="javascript">
+ /*<![CDATA[*/
+        var val = /*[[${updateSuccessFlag}]]*/;
+        if(val!=null){
+        alert("Your Mobile number has been updated Successfully");
+        }
+    /*]]>*/
+     /*<![CDATA[*/
+        var val = /*[[${updatePasswordSuccessFlag}]]*/;
+        if(val!=null){
+        alert("Your Password has been updated Successfully. Please Login again!");
+        window.location="/login";
+        }
+    /*]]>*/
+    /*<![CDATA[*/
+        var val = /*[[${notUpdated}]]*/;
+        if(val==="false"){
+        alert("You haven't updated your Mobile Number");
+        window.location="/showInfo";
+        }
+    /*]]>*/
+</script>
+
+<div class="container">
+    <hr>
+    <h3>Your Information</h3>
+    <hr>
+
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th align="center">Name </th>
+            <th align="center">Email</th>
+            <th align="center">Mobile</th>
+            <th align="center">Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="temp : ${user}">
+
+            <td th:text="${temp.username}" align="center" />
+            <td th:text="${temp.email}" align="center"/>
+            <td th:text="${temp.mobile}" align="center"/>
+
+            <td>
+
+                <a th:href="@{/update}"
+                   class="btn btn-info btn-sm">
+                    Update Mobile Number
+                </a>
+
+                <br><br>
+
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/updatePassword}">
+        Update Password
+    </a>
+<br>
+    <a th:href="@{/welcome}"
+       class="btn btn-info col-2">
+        Go Back
+    </a>
+</div>
+
+</body>
+</html>
+
+

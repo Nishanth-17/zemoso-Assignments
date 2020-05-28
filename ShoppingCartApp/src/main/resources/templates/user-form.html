@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Save User</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h3>User Form</h3>
+    <hr>
+
+    <p class="h4 mb-4">Enter User Details</p>
+
+    <form action="#" th:action="@{/users/save}"
+          th:object="${user}" method="POST">
+
+        <!-- Add hidden form field to handle update -->
+        <input type="hidden" th:field="*{userId}" />
+
+        <input type="text" th:field="*{userName}"
+               class="form-control mb-4 col-4" placeholder="Name" >
+        <p style="color:red" th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}">Name Error</p>
+
+        <input type="text" th:field="*{userEmail}"
+               class="form-control mb-4 col-4" placeholder="Email">
+        <p style="color:red" th:if="${#fields.hasErrors('userEmail')}" th:errors="*{userEmail}">Email Error</p>
+
+        <input type="text" th:field="*{userMobile}"
+               class="form-control mb-4 col-4" placeholder="Mobile Number">
+        <p style="color:red" th:if="${#fields.hasErrors('userMobile')}" th:errors="*{userMobile}">Mobile Error</p>
+
+        <button type="submit" class="btn btn-success col-2">Save</button>
+
+    </form>
+
+    <hr>
+    <a th:href="@{/users/list}" class="btn btn-info col-2">Go Back</a>
+
+</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
