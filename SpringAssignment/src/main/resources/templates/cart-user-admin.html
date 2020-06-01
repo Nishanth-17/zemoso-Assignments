@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>User Cart</title>
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+    <hr>
+    <h2 th:inline="text" align="left">
+        [[${username}]]'s Cart
+    </h2>
+    <hr>
+    <table class="table table-bordered table-striped" style= "width: 60%;float: left">
+        <thead class="thead-dark">
+        <tr>
+            <th>Item Name</th>
+            <th>Price(INR)</th>
+            <th>Manufacturer</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="temp : ${itemStores}">
+            <td th:text="${temp.itemName}" align="center"/>
+            <td th:text="${temp.price}" align="center"/>
+            <td th:text="${temp.company}" align="center" />
+        </tbody>
+    </table>
+
+    <table class="table table-bordered table-striped" style= "width: 20%;float: left">
+        <thead class="thead-dark">
+        <tr>
+            <th>Quantity</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="temp : ${quantity}">
+            <td th:text="${temp}"/>
+        </tr>
+        </tbody>
+    </table >
+    <table class="table table-bordered table-striped" style= "width:20%;float: left">
+        <thead class="thead-dark">
+        <tr>
+            <th>Total Amount</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="temp : ${totalList}">
+            <td th:text="${temp}"/>
+        </tr>
+        </tbody>
+    </table>
+    <h2 th:inline="text" align="right">
+        Cart Total : [[${cartTotal}]]
+    </h2>
+        <a th:href="@{/admin/showUsers}" class="btn btn-info mb-3"> Back to Users </a>
+    </div>
+
+</div>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+        var val = /*[[${items}]]*/;
+        if(val.length===0){
+        alert("Cart is Empty!");
+        window.location="/admin/showUsers";
+    }
+    /*]]>*/
+   </script>
+</body>
+</html>
+
+

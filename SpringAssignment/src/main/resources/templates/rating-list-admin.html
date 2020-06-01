@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Item Ratings</title>
+</head>
+
+<body>
+
+<div class="container">
+    <hr>
+    <h2>RATINGS</h2>
+    <hr>
+    <table class="table table-bordered table-striped" style="width: 70%;float:left">
+        <thead class="thead-dark">
+        <tr>
+            <th>Item Name</th>
+            <th>Price(INR)</th>
+            <th>Manufacturer</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="temp : ${itemStores}">
+            <td th:text="${temp.itemName}" align="center"/>
+            <td th:text="${temp.price}" align="center"/>
+            <td th:text="${temp.company}" align="center"/>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+        <table class="table table-bordered table-striped" style="width: 30%;float:left">
+            <thead class="thead-dark">
+            <tr>
+                <th>Rating</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="temp : ${ratings}">
+                <td th:text="${temp}" align="center"/>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a th:href="@{/welcome}" class="btn btn-info mb-3"> Go Back </a>
+</div>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+        var val = /*[[${itemStores}]]*/;
+        if(val.length===0){
+        alert("No Items Present!");
+        window.location="/welcome";
+    }
+    /*]]>*/
+   </script>
+</body>
+</html>
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Users</title>
+</head>
+<body>
+<div class="container">
+    <hr>
+    <h2>USERS</h2>
+    <hr>
+    <div>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>User Name</th>
+            <th>Email ID</th>
+            <th>Mobile Number</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="temp : ${users}">
+            <td th:text="${temp.username}" align="center"/>
+            <td th:text="${temp.email}" align="center"/>
+            <td th:text="${temp.mobile}" align="center" />
+            <td>
+                <a th:href="@{/admin/cart/}+${temp.id}"
+                   class="btn btn-success btn-sm">
+                    Go to Cart
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+        <a th:href="@{/welcome}" class="btn btn-info mb-3"> Go Back </a>
+</div>
+</div>
+</body>
+</html>

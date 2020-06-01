@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Login page</title>
+  </head>
+  <body>
+  <h2><p class=" border border-white p-5" align="left">SHOPPING CART APPLICATION</p></h2>
+  <br>
+
+<form class="text-center border border-white p-5" th:action="@{/login}" method="post">
+
+  <div class="position-relative form-group col-sm-3 ">
+
+     <p class="h4 mb-4">Sign In to your Account</p><hr><br>
+
+  <!-- Username -->
+  <input type="text" id="username" name="username" class="form-control mb-4" placeholder="Username" required autofocus>
+
+  <!-- Password -->
+  <input type="password" id="password" name="password" class="form-control mb-4" placeholder="Password" required>
+  <div th:if="${param.error}" class="alert alert-danger">
+    Invalid Username/Password
+  </div>
+
+  <div th:if="${param.logout}" class="alert alert-success">
+    You have been Logged out successfully!
+  </div>
+
+  <div class="d-flex justify-content-around">
+
+  <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+  </div>
+
+  <p>Don't have an Account?
+    <a th:href="@{/registration}">Register</a>
+  </p></div>
+</form>
+  <script th:inline="javascript">
+    /*<![CDATA[*/
+        var name = /*[[${successFlag}]]*/;
+        if(!(name==="null")){
+        alert("You are successfully registered as "+name+".");
+        window.location = "/login";
+        }
+    /*]]>*/
+</script>
+  </body>
+</html>
