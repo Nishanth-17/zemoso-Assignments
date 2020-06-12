@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="gridLayout">
+            <div class="tables">
+                <h2>Tables</h2>
+                <input type="text" id="searchTable" onkeyup="tableSearch()"  placeholder="Search table...">
+                <br><br>
+                <div class="table"  onclick="viewDetails('order1')" id="table1" ondrop="drop_handler(event,this)" ondragover="dragover_handler(event)">
+                    <p>Table 1</p>
+                    <p>Rs : 0</p>
+                    <p>Total Items : 0</p>
+                    <table id="order1"  style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Suggestions</th>
+                        </tr>
+                    </thead>
+                    </table>
+                    <button class="bill" id="bill1" onclick="generateBill('order1')" style="display: none;">Generate Bill</button>
+                </div>
+                <div class="table" onclick="viewDetails('order2')" id="table2" ondrop="drop_handler(event,this)" ondragover="dragover_handler(event)">
+                    <p>Table 2</p>
+                    <p>Rs : 0</p>
+                    <p>Total Items : 0</p>
+                    <table id="order2" style="display: none;">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Suggestions</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <button class="bill" id="bill2" onclick="generateBill('order2')" style="display: none;">Generate Bill</button>
+                </div>
+                <div class="table" id="table3" onclick="viewDetails('order3')" ondrop="drop_handler(event,this)" ondragover="dragover_handler(event)">
+                    <p>Table 3</p>
+                    <p>Rs : 0</p>
+                    <p>Total Items : 0</p>
+                    <table id="order3" style="display: none;">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Suggestions</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <button class="bill" id="bill3" onclick="generateBill('order3')" style="display: none;">Generate Bill</button>
+                </div>
+            </div>
+            <div id="menu">
+                <h2>Menu</h2>
+                <input type="text"  id="searchMenu" onkeyup="itemSearch()" size=50  placeholder="Search menu... by course, by food, by price">
+                <br><br>
+                <div id="maincourse">
+                    <p class='item' id='i1' draggable="true" ondragstart="dragstart_handler(event)">Veg. Biryani Rs-150</p>
+                    <p class='item' id='i2' draggable="true" ondragstart="dragstart_handler(event)">Veg. Pulao Rs-140</p>
+                    <p class='item' id='i3' draggable="true" ondragstart="dragstart_handler(event)">Paneer Pulao Rs-150</p>
+                </div>
+                <div id="appetizer">
+                    <p class='item' id='i4' draggable="true" ondragstart="dragstart_handler(event)">Paneer 65 Rs-90</p>
+                    <p class='item' id='i5' draggable="true" ondragstart="dragstart_handler(event)">Veg. Kabab Rs-100</p>
+                    <p class='item' id='i6' draggable="true" ondragstart="dragstart_handler(event)">Veg. Spring Roll Rs-120</p>
+                </div>
+                <div id="dessert">
+                    <p class='item' id='i7' draggable="true" ondragstart="dragstart_handler(event)">Mango Delight Rs-60</p>
+                    <p class='item' id='i8' draggable="true" ondragstart="dragstart_handler(event)">Fruit Punch Rs-100</p>
+                    <p class='item' id='i9' draggable="true" ondragstart="dragstart_handler(event)">Choco Fudge Rs-120</p>
+                </div>
+                <div id="beverage">
+                    <p class='item' id='i10' draggable="true" ondragstart="dragstart_handler(event)">Chocolate Milkshake Rs-70</p>
+                    <p class='item' id='i11' draggable="true" ondragstart="dragstart_handler(event)">Strawberry Milkshake Rs-50</p>
+                    <p class='item' id='i12' draggable="true" ondragstart="dragstart_handler(event)">Coconut Mix Rs-40</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
