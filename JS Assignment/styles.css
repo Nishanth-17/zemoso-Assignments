@@ -1,0 +1,128 @@
+body{
+    background-image: url("data:image/jpeg;base64,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");
+    height: 100%; 
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body h2{
+    letter-spacing: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.gridLayout{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    padding: 10px;
+    grid-gap: 20px;
+}
+
+.gridLayout .tables .bill{
+        font-family: 'Times New Roman', Times, serif;
+        letter-spacing: 2px;
+        background:rgb(212, 247, 148);
+        cursor: pointer;
+        border:none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 22px;
+        margin: 4px 2px;
+        transition: 0.3s;
+}
+      
+.gridLayout .tables .bill:hover{
+    transition: 0.1s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gridLayout .tables{
+    text-align: center;
+}
+
+.gridLayout .tables #searchTable{
+    font-size: 18px;
+    letter-spacing: 2px;
+    background: transparent;
+    padding: 10px 12px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gridLayout #menu{
+    text-align: center;
+}
+.gridLayout #menu #searchMenu{
+    font-size: 18px;
+    letter-spacing: 2px;
+    background: transparent;
+    padding: 10px 12px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gridLayout .tables .table{
+    color: rgb(78, 78, 78);
+    padding: 15px 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}   
+
+.gridLayout .tables .table:hover{
+  box-shadow: 0 0 6px rgb(88, 88, 88);
+} 
+
+#menu #maincourse .item{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(78, 78, 78);
+    letter-spacing: 2px;
+    font-size: 22px;
+    padding: 15px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#menu #dessert .item{
+    color: rgb(78, 78, 78);
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    letter-spacing: 2px;
+    font-size: 22px;
+    padding: 15px 10px;
+}
+#menu #appetizer .item{
+    color: rgb(78, 78, 78);
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-size: 22px;
+    padding: 15px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#menu #beverage .item{
+    color: rgb(78, 78, 78);
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-size: 22px;
+    padding: 15px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.deleteButton {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding:0px 5px;
+    color: rgb(209, 45, 45); 
+    font-size: 25px; 
+    cursor: pointer; 
+  }
+  
+  .deleteButton:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .table:hover{
+      cursor: pointer;
+  }
