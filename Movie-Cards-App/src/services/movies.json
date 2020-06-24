@@ -1,0 +1,111 @@
+[
+    {
+        "id": 100,
+        "title": "Avengers: Endgame",
+        "genre": "Action/Sci-Fi",
+        "description":"After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.",
+        "year": 2019,
+        "imageUrl": "Endgame",
+        "rating": 4.9
+    },
+    {
+        "id": 200,
+        "title": "Joker",
+        "genre": "Drama/Crime",
+        "description": "Isolated, bullied and disregarded by society, Fleck begins a slow descent into madness as he transforms into the criminal mastermind known as the Joker.",
+        "year": 2019,
+        "imageUrl": "Joker",
+        "rating": 4.7
+    },
+    {
+        "id": 300,
+        "title": "Parasite",
+        "genre": "Thriller/Comedy",
+        "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+        "year": 2019,
+        "imageUrl": "Parasite",
+        "rating": 4.7
+    },
+    {
+        "id":400,
+        "title": "Avengers: Infinity War",
+        "genre": "Action/Sci-Fi",
+        "description": "The Avengers must stop Thanos, an intergalactic warlord, from getting his hands on all the infinity stones. However, Thanos is prepared to go to any lengths to carry out his insane plan.",
+        "year": 2018,
+        "imageUrl":"Infinity_War",
+        "rating":4.4
+    },
+    {
+        "id": 500,
+        "title": "Don't Breathe",
+        "genre": "Horror/Thriller",
+        "description": "Three delinquents break into the house of Norman, who is blind, to steal his money. However, much to their horror, they discover that Norman is not as defenceless as he seems.",
+        "year": 2016,
+        "imageUrl": "Dont_Breathe",
+        "rating": 3.9
+    },
+    {
+        "id": 600,
+        "title": "Furious 7",
+        "genre": "Action/Thriller",
+        "description": "Dominic and his family are caught in a quagmire when Shaw's brother seeks bloody revenge. They must save a crucial program from falling into the wrong hands.",
+        "year": 2015,
+        "imageUrl": "Furious",
+        "rating": 4.1
+    },
+    
+    {
+        "id": 700,
+        "title": "Interstellar",
+        "genre": "Sci-Fi/Adventure",
+        "description": "Professor Brand (Michael Caine), a brilliant NASA physicist, is working on plans to save mankind by transporting Earth's population to a new home via a wormhole.",
+        "year": 2014,
+        "imageUrl": "Interstellar",
+        "rating": 4.6
+    },
+    {
+        "id": 800,
+        "title": "Inception",
+        "genre": "Thriller/Action",
+        "description":"Cobb steals information from his targets by entering their dreams. Saito offers to wipe clean Cobb's criminal history as payment for performing an inception on his sick competitor's son.",
+        "year": 2010,
+        "imageUrl": "Inception",
+        "rating": 4.1
+    },
+    {
+        "id":900,
+        "title": "Avatar",
+        "genre": "Action/Sci-Fi",
+        "description": "Jake, who is paraplegic, replaces his twin on the Na'vi inhabited Pandora for a corporate mission. After the natives accept him as one of their own, he must decide where his loyalties lie.",
+        "year": 2009,
+        "imageUrl":"Avatar",
+        "rating":4.4
+    },
+    {
+        "id": 1000,
+        "title": "The Dark Knight",
+        "genre": "Action/Adventure",
+        "description": "After Gordon, Dent and Batman begin an assault on Gotham's organised crime, the mobs hire the Joker, a psychopathic criminal mastermind who offers to kill Batman and bring the city to its knees.",
+        "year": 2008,
+        "imageUrl": "Dark_Knight",
+        "rating": 4.6
+    },
+    {
+        "id": 1100,
+        "title": "I Am Legend",
+        "genre": "Sci-Fi/Horror",
+        "description": "Robert Neville, a scientist, is the last human survivor of a plague in the whole of New York. He attempts to find a way to reverse the effects of the man-made virus by using his own immune blood.",
+        "year": 2007,
+        "imageUrl": "Legend",
+        "rating": 4.3
+    },
+    {
+        "id": 1200,
+        "title": "Titanic",
+        "genre": "Romance/Drama",
+        "description":"Seventeen-year-old Rose hails from an aristocratic family and is set to be married. When she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.",
+        "year": 1997,
+        "imageUrl": "Titanic",
+        "rating": 4.3
+    }
+]
