@@ -1,6 +1,8 @@
 import React from 'react';
-import '../../styles/components/searchBar.css';
+import styled from 'styled-components';
+import '../../index.css'
 
+  
 const SearchBar =(props) => {
     return(
     <div className="form-group has-search">

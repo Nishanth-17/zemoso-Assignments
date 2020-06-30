@@ -1,7 +1,8 @@
 import React ,{Component} from 'react';
 import MovieCard from '../molecules/MovieCard';
 import SearchBar from '../atoms/SearchBar';
- export default class MovieList extends Component{
+
+export default class MovieList extends Component{
      constructor(){
          super();
          this.state={
@@ -22,11 +23,7 @@ import SearchBar from '../atoms/SearchBar';
             }
         );
         let result='';
-        if(this.filteredMovies.length === this.props.movies.length)
-        {
-            result="";
-        }
-        else if(this.filteredMovies.length === 0)
+        if(this.filteredMovies.length === 0)
         {
             result='No Results Found';
         }
@@ -34,7 +31,7 @@ import SearchBar from '../atoms/SearchBar';
         {
             result='1 Result Found';
         }
-        else {
+        else if(this.filteredMovies.length !== this.props.movies.length) {
             result= this.filteredMovies.length + ' Results Found';
         }
         

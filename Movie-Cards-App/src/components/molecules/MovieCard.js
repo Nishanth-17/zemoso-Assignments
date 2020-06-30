@@ -20,12 +20,14 @@ import Dont_Breathe from '../../images/DontBreathe.jpg';
 import Furious from '../../images/Furious7.jpg'; 
 import Legend from '../../images/Legend.jpg';
 
+
 const MovieCard = (props) => {
+
     let image=urlName(props);
     return(
     <div className="movie-card">
         <div className="movie-card card">
-            <Poster image={image} />
+            <Poster image={image} video={props.movie.videoId} />
             <div className="card-body">
                 <Title title={props.movie.title} />
                 <Genre genre={props.movie.genre} />
