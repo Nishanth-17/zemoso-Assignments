@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match the snapshot - Description 1`] = `
+<p
+  className="text-justify"
+  style={
+    Object {
+      "fontSize": "14px",
+    }
+  }
+/>
+`;

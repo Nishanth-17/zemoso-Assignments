@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match the snapshot - Genre 1`] = `
+<h6
+  className="card-subtitle mb-2 text-muted"
+/>
+`;

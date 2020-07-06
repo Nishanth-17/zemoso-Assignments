@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match the snapshot - Movies 1`] = `
+<div
+  className="container-fluid"
+  style={
+    Object {
+      "marginLeft": "-15px",
+    }
+  }
+>
+  <div />
+</div>
+`;

@@ -1,11 +1,11 @@
 import React from 'react';
-import StarRating from '../atoms/StarRating';
-import Rating from '../atoms/Rating';
-import Poster from '../atoms/Poster';
-import Title from '../atoms/Title';
-import Genre from '../atoms/Genre';
-import Description from '../atoms/Description';
-import Release from '../atoms/Release';
+import StarRating from '../atoms/StarRating/StarRating';
+import Rating from '../atoms/Rating/Rating';
+import Poster from '../atoms/Poster/Poster';
+import Title from '../atoms/Title/Title';
+import Genre from '../atoms/Genre/Genre';
+import Description from '../atoms/Description/Description';
+import Release from '../atoms/Release/Release';
 import '../../styles/components/movieCard.css';
 import Knight from '../../images/Dark_Knight.jpg';
 import Titanic from '../../images/Titanic.jpg';
@@ -54,8 +54,6 @@ let urlName= (props) => {
         image=Titanic;
     else if(name==='Inception')
         image=Inception;
-    else if(name==='Endgame')
-        image=Endgame;
     else if(name==='Infinity_War')
         image=Infinity_War;
     else if(name==='Avatar')
@@ -70,6 +68,8 @@ let urlName= (props) => {
         image=Dont_Breathe;
     else if(name==='Furious')
         image=Furious;
+    else if(name==='Endgame')
+            image=Endgame;
     else
         image=Legend;
     return image;

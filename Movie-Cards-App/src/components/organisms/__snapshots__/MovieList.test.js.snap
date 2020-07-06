@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match the snapshot - MovieList 1`] = `
+<div>
+  <div
+    className="form-group has-search"
+  >
+    <span
+      className="fa fa-search form-control-feedback"
+    />
+    <input
+      className="form-control"
+      onChange={[Function]}
+      placeholder="Search by Movie Name..."
+      size="40"
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+      type="text"
+      value=""
+    />
+    <p
+      className=""
+      style={
+        Object {
+          "color": "gray",
+          "display": "inline-block",
+          "fontSize": "18px",
+        }
+      }
+    >
+      1 Result Found
+    </p>
+  </div>
+  <div
+    className="card-deck"
+  >
+    <div />
+  </div>
+</div>
+`;

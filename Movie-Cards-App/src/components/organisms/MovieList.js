@@ -1,6 +1,6 @@
 import React ,{Component} from 'react';
 import MovieCard from '../molecules/MovieCard';
-import SearchBar from '../atoms/SearchBar';
+import SearchBar from '../atoms/SearchBar/SearchBar';
 
 export default class MovieList extends Component{
      constructor(){

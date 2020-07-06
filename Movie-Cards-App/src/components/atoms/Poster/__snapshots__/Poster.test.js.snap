@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match the snapshot - Poster 1`] = `
+<div>
+  <img
+    alt="movie-poster"
+    style={
+      Object {
+        "height": "170px",
+        "width": "298px",
+      }
+    }
+  />
+  <div
+    className="modalVideo"
+    data-testid="modal"
+  />
+  <button
+    className="sc-AxjAm gBHxQp button"
+    id="videolink"
+    onClick={[Function]}
+  >
+    <i
+      arial-hidden="true"
+      className="fa fa-play-circle"
+    />
+  </button>
+</div>
+`;

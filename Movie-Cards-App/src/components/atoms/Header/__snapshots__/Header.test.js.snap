@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match the snapshot - Header 1`] = `
+<header
+  className="sc-AxjAm cBHWEl"
+>
+  <nav
+    className="header navbar"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row m-auto"
+      >
+        <br />
+        <br />
+        <br />
+        <i
+          className="fa fa-film fa-2x text-white my-auto"
+        />
+        <div
+          className="h3 ml-3 my-auto text-light"
+          href="/"
+        />
+      </div>
+    </div>
+  </nav>
+</header>
+`;

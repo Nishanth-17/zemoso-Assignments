@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match the snapshot - Rating 1`] = `
+<div
+  className="card-footer-badge float-right badge badge-primary badge-pill"
+/>
+`;

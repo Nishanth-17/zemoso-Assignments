@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match the snapshot - StarRating 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "overflow": "hidden",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "width": "0px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "position": "absolute",
+            "width": "110px",
+          }
+        }
+      >
+        <i
+          className="fa fa-star-o fa-lg"
+          style={
+            Object {
+              "padding": "1px",
+            }
+          }
+        />
+        <i
+          className="fa fa-star-o fa-lg"
+          style={
+            Object {
+              "padding": "1px",
+            }
+          }
+        />
+        <i
+          className="fa fa-star-o fa-lg"
+          style={
+            Object {
+              "padding": "1px",
+            }
+          }
+        />
+        <i
+          className="fa fa-star-o fa-lg"
+          style={
+            Object {
+              "padding": "1px",
+            }
+          }
+        />
+        <i
+          className="fa fa-star-o fa-lg"
+          style={
+            Object {
+              "padding": "1px",
+            }
+          }
+        />
+      </div>
+      <div
+        style={
+          Object {
+            "width": "110px",
+          }
+        }
+      >
+        <i
+          className="fa fa-star fa-lg"
+          style={
+            Object {
+              "padding": "1px",
+            }
+          }
+        />
+        <i
+          className="fa fa-star fa-lg"
+          style={
+            Object {
+              "padding": "1px",
+            }
+          }
+        />
+        <i
+          className="fa fa-star fa-lg"
+          style={
+            Object {
+              "padding": "1px",
+            }
+          }
+        />
+        <i
+          className="fa fa-star fa-lg"
+          style={
+            Object {
+              "padding": "1px",
+            }
+          }
+        />
+        <i
+          className="fa fa-star fa-lg"
+          style={
+            Object {
+              "padding": "1px",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

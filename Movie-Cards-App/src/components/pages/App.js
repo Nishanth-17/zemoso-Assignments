@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../atoms/Header';
+import Header from '../atoms/Header/Header';
 import Movies from '../organisms/Movies';
 
 const App = () =>  {

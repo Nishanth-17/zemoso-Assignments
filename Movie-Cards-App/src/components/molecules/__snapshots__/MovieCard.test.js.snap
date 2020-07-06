@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match the snapshot - MovieCard 1`] = `
+<div
+  className="movie-card"
+>
+  <div
+    className="movie-card card"
+  >
+    <div />
+    <div
+      className="card-body"
+    >
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
+    <div
+      className="card-footer"
+    >
+      <div
+        className="float-left mt-1"
+      >
+        <div />
+      </div>
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Match the snapshot - MovieCard 1 1`] = `
+<div
+  className="movie-card"
+>
+  <div
+    className="movie-card card"
+  >
+    <div />
+    <div
+      className="card-body"
+    >
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
+    <div
+      className="card-footer"
+    >
+      <div
+        className="float-left mt-1"
+      >
+        <div />
+      </div>
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Match the snapshot - MovieCard 2 1`] = `
+<div
+  className="movie-card"
+>
+  <div
+    className="movie-card card"
+  >
+    <div />
+    <div
+      className="card-body"
+    >
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
+    <div
+      className="card-footer"
+    >
+      <div
+        className="float-left mt-1"
+      >
+        <div />
+      </div>
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Match the snapshot - MovieCard 3 1`] = `
+<div
+  className="movie-card"
+>
+  <div
+    className="movie-card card"
+  >
+    <div />
+    <div
+      className="card-body"
+    >
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
+    <div
+      className="card-footer"
+    >
+      <div
+        className="float-left mt-1"
+      >
+        <div />
+      </div>
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Match the snapshot - MovieCard 4 1`] = `
+<div
+  className="movie-card"
+>
+  <div
+    className="movie-card card"
+  >
+    <div />
+    <div
+      className="card-body"
+    >
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
+    <div
+      className="card-footer"
+    >
+      <div
+        className="float-left mt-1"
+      >
+        <div />
+      </div>
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Match the snapshot - MovieCard 5 1`] = `
+<div
+  className="movie-card"
+>
+  <div
+    className="movie-card card"
+  >
+    <div />
+    <div
+      className="card-body"
+    >
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
+    <div
+      className="card-footer"
+    >
+      <div
+        className="float-left mt-1"
+      >
+        <div />
+      </div>
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Match the snapshot - MovieCard 6 1`] = `
+<div
+  className="movie-card"
+>
+  <div
+    className="movie-card card"
+  >
+    <div />
+    <div
+      className="card-body"
+    >
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
+    <div
+      className="card-footer"
+    >
+      <div
+        className="float-left mt-1"
+      >
+        <div />
+      </div>
+      <div />
+    </div>
+  </div>
+</div>
+`;

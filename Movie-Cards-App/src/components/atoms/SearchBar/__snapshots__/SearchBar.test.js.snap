@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match the snapshot - SearchBar 1`] = `
+<div
+  className="form-group has-search"
+>
+  <span
+    className="fa fa-search form-control-feedback"
+  />
+  <input
+    className="form-control"
+    placeholder="Search by Movie Name..."
+    size="40"
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+    type="text"
+  />
+  <p
+    className=""
+    style={
+      Object {
+        "color": "gray",
+        "display": "inline-block",
+        "fontSize": "18px",
+      }
+    }
+  />
+</div>
+`;
