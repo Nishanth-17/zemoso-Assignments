@@ -110,29 +110,18 @@ jest.mock('../atoms/StarRating/StarRating',() => ({
     default: () => { return <div></div>}
 }))
 test("Match the snapshot - MovieCard 1",() => {
-    const input=create(<MovieCard movie={movie1}/> );
-    expect(input.toJSON()).toMatchSnapshot();
-})
-test("Match the snapshot - MovieCard 2",() => {
-    const input=create(<MovieCard movie={movie2}/> );
-    expect(input.toJSON()).toMatchSnapshot();
-})
-test("Match the snapshot - MovieCard 3",() => {
-    const input=create(<MovieCard movie={movie3}/> );
-    expect(input.toJSON()).toMatchSnapshot();
-})
-test("Match the snapshot - MovieCard 4",() => {
-    const input=create(<MovieCard movie={movie4}/> );
-    expect(input.toJSON()).toMatchSnapshot();
-})
-test("Match the snapshot - MovieCard 5",() => {
-    const input=create(<MovieCard movie={movie5}/> );
-    expect(input.toJSON()).toMatchSnapshot();
-})
-
-test("Match the snapshot - MovieCard 6",() => {
-    const input=create(<MovieCard movie={movie6}/> );
-    expect(input.toJSON()).toMatchSnapshot();
+    const input1=create(<MovieCard movie={movie1}/> );
+    expect(input1.toJSON()).toMatchSnapshot();
+    const input2=create(<MovieCard movie={movie2}/> );
+    expect(input2.toJSON()).toMatchSnapshot();
+    const input3=create(<MovieCard movie={movie3}/> );
+    expect(input3.toJSON()).toMatchSnapshot();
+    const input4=create(<MovieCard movie={movie4}/> );
+    expect(input4.toJSON()).toMatchSnapshot();
+    const input5=create(<MovieCard movie={movie5}/> );
+    expect(input5.toJSON()).toMatchSnapshot();
+    const input6=create(<MovieCard movie={movie6}/> );
+    expect(input6.toJSON()).toMatchSnapshot();
 })
 /*
 test("Image is present", () => {
